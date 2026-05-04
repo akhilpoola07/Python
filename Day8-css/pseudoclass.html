@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            color: white;
+            background-color: blue;
+        }
+        button:hover {
+            color: rgb(21, 178, 55);
+            background-color: red;
+        }
+        p::first-letter {
+            color: red;
+            font-size: 30px;
+        }
+        p::selection {
+            color: white;
+            background-color: black;
+        }
+        .class1::before {
+            content: "Hello, world!";
+        }button::before{
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="class1">pseudo class</h1>
+    <button>Hover over me</button>
+    <p>This is para1</p>
+</body>
+</html>

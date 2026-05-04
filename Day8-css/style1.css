@@ -1,0 +1,28 @@
+/* id selector */
+#id1 {
+    color: red;
+    /* highest preference */
+}
+/* element selector */
+h1{ 
+    color:blue;
+
+}
+.class1 {
+    color:green;
+
+}
+/* Universal selector */
+*{
+    color:orange;
+}
+/* descendant selector */
+div p{
+    color:yellow;
+}
+div + p{
+    color:cyan;
+}
+div~p{
+    color:magenta;
+}

@@ -1,0 +1,52 @@
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Type Selector */
+body {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #0000ff; /* Blue */
+}
+
+/* ID Selector */
+#unique-header {
+  border-bottom: 2px solid #333;
+  margin-bottom: 20px;
+}
+
+/* Class Selector */
+.class1 {
+  color: #ffa500; /* Your orange color */
+  font-weight: bold;
+}
+
+/* Attribute Selector */
+a[id="0"] {
+  color: green;
+  text-decoration: none;
+}
+
+/* Pseudo-class */
+a:hover {
+  text-decoration: underline;
+  color: darkgreen;
+}
+
+/* Descendant Selector */
+div p {
+  font-style: italic;
+}
+
+/* Pseudo-element */
+p::selection {
+  background: yellow;
+  color: black;
+}
