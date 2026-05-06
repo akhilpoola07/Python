@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joke of the Day</title>
+</head>
+<body>
+    <h1>Event Object</h1>
+    <button>Click Me</button>
+    <script>
+        const url = "https://official-joke-api.appspot.com/random_joke";
+
+        async function get_data() {
+            try {
+                let response = await fetch(url);
+                let data = await response.json();
+                
+                // This API returns an object with 'setup' and 'punchline'
+                console.log(data);
+            } catch (error) {
+                console.error("Connection error:", error);
+            }
+        }
+        get_data();
+        console.log("Line1")
+        console.log("Line2")
+    </script>
+</body>
+</html>

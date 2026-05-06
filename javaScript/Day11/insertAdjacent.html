@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one {
+            width: 200px;
+            height: 300px;
+            background-color: lightblue;
+            border: 15px solid rgb(229, 129, 8);
+        }
+        </style>
+</head>
+<body>
+    <div id = "one"></div>
+    <script >
+        let div = document.querySelector("#one");
+        //beforebegin: Before the element itself.
+        let p = document.createElement("p");
+        p.textContent = "This is a new paragraph.";
+        p.style.color = "red";
+        p.style.backgroundColor = "yellow";
+        //insert AdjacentElement
+        
+        div.insertAdjacentElement("beforebegin", p);
+        
+        let p4 = document.createElement("p");
+        p4.textContent = "before behin2.";
+        p4.style.color = "red";
+        p4.style.backgroundColor = "yellow";
+        div.insertAdjacentElement("beforebegin", p4);
+    
+        //Afterbegin: Just inside the element, before its first child.
+        let p1 = document.createElement("p");
+        p1.textContent = "This is a new paragraph.";
+        p1.style.color = "red";
+        p1.style.backgroundColor = "yellow";
+        //insert AdjacentElement
+        
+        div.insertAdjacentElement("afterbegin", p1);
+
+        
+        let p5 = document.createElement("p");
+        p5.textContent = "This is a new paragraph afterbegin2.";
+        p5.style.color = "red";
+        p5.style.backgroundColor = "yellow";
+        div.insertAdjacentElement("afterbegin", p5);
+
+        //beforeend: Just inside the element, after its last child.
+        
+        let p2 = document.createElement("p");
+        p2.textContent = "This is a new paragraph.";
+        p2.style.color = "red";
+        p2.style.backgroundColor = "yellow";
+        
+        div.insertAdjacentElement("beforeend", p2);
+
+        let p7 = document.createElement("p");
+        p7.textContent = "This is a new paragraph end2.beforeend.";
+        p7.style.color = "red";
+        p7.style.backgroundColor = "yellow";
+        div.insertAdjacentElement("beforeend", p7);
+        
+        
+        //Afterend: Just after the element itself.
+        let p3 = document.createElement("p");
+        p3.textContent = "This is a new paragraph.";
+        p3.style.color = "red";
+        p3.style.backgroundColor = "yellow";
+        
+        div.insertAdjacentElement("afterend", p3);   
+
+         let p6 = document.createElement("p");
+        p6.textContent = "This is a new paragraph afterend2.";
+        p6.style.color = "red";
+        p6.style.backgroundColor = "yellow";
+        div.insertAdjacentElement("afterend", p6);
+        
+    </script>
+</body>
+</html>

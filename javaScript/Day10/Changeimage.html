@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Spider Man</h1>
+    <p>this is the images of Spiderman And Ironman</p>
+    <p>this is the images of Spiderman And Ironman</p>
+    <img id ="id1" src="spider.jpeg" style="width:300px; height:300px;">
+    <img id = "id1" src="spider.jpeg" style="width:300px; height:300px;">
+    <img id = "id1" src="spider.jpeg" style="width:300px; height:300px;">
+    <img id = "id2" src="spider.jpeg" style="width:300px; height:300px;">
+        <button onclick="buttonClick()">Change Image</button>
+    <script>
+        //src method is used to change the source of the image
+       function buttonClick(){
+        let imgElement = document.querySelectorAll("#id1");
+        for(let i of imgElement){
+            i.src = "Ironman.jpeg"
+            i.style.width = "300px"
+            i.style.height = "300px"
+            
+            
+        }}
+        //Another Method
+        //Attribute method is used to change the source of the image
+        // function buttonClick(){
+        //     let imgElement = document.querySelectorAll("#id2");
+        //     for(let i of imgElement){
+        //         i.setAttribute("src","Ironman.jpeg")
+        //         i.style.width = "300px"
+        //         i.style.height = "300px"
+        //     }}
+        let imgElement1 = document.querySelector("#id2");
+        console.log(imgElement1)
+        imgElement1.setAttribute("src","Ironman.jpeg")
+        imgElement1.style.width = "300px"
+        imgElement1.style.height = "300px"
+        console.log(imgElement1.getAttribute("src"))
+
+        let paragraph = document.querySelector("p");
+            paragraph.style.color = "red"
+            paragraph.style.fontSize = "20px"
+            paragraph.style.backgroundColor = "yellow"
+                
+    </script>
+</body>
+</html>

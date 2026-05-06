@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Multiplication</h1>
+    <script>
+        //first own metod
+        let arr1 = [1,2,3,4,5]
+        let arr2=[]
+        function mul(arr){
+            for (let i of arr){
+                 i*=10
+                 arr2.push(i)
+                
+            }
+            return arr2
+
+        }
+        console.log(mul(arr1));
+        //Another
+        arr4 = []
+        function multen(a){
+            return a*=20
+        }
+        for(let a of arr1){
+            arr4.push(multen(a));
+        }
+        console.log(arr4)
+        //Another
+        arr3 = arr1.map((a)=>{
+            return a*10
+        });
+        console.log(arr3)
+    </script>
+</body>
+</html>

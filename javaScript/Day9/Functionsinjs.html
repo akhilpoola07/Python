@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Function declaration
+        function sum(a,b){
+            let c = a + b
+            return c;
+        }
+        const answer = sum(5,10)
+        console.log(answer)
+        // Function expression
+        const sum2 = function(a,b){
+            let c = a + b
+            return c;
+        }
+        const answer2 = sum2(5,100)
+        console.log(answer2)
+        // Arrow function
+        const sum3 = (a,b) => {
+            let c = a + b
+            return c;
+        }
+        const answer3 = sum3(5,1000)
+        console.log(answer3)
+        arr1 = [1,2,3,4,5]
+        const even = (arr1) => {
+            for (let i of arr1){
+                if (i%2==0){
+                    console.log(i)
+                }
+            }
+        }
+        even(arr1)
+        //Another way to find even numbers using filter method
+        const even2 = arr1.filter((num) => num%2==0)
+        console.log(even2)
+    </script>
+</head>
+<body>
+    functions are reusable blocks of code that perform a specific task. They can take input in the form of parameters and can return a value. In JavaScript, there are several ways to define functions, including function declarations, function expressions, and arrow functions.
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1>Document Object Model (DOM)</h1>
+    <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, allowing developers to manipulate the content, structure, and style of a web page dynamically using JavaScript. The DOM provides methods and properties to access</p>
+    <p id="demo">This is a paragraph with id demo</p>
+    <button onclick="document.getElementById('myImage').src='bulbon.jpeg'">Turn on the light</button>
+
+    <img id="myImage" src="bulbon.jpeg" style="width:100px">
+    
+
+    <button onclick="document.getElementById('myImage').src='bulboff.jpeg'">Turn off the light</button>
+     <script>
+        
+        console.log(window)
+        console.log(window["document"]["all"][6]["innerHTML"]);
+        window["document"]["all"][6]["innerHTML"] = "change"
+        console.log(window["document"]["all"][6]["innerHTML"]);
+        window["document"]["all"][6]["innerHTML"] = "this is again Changing"
+        console.log(window["document"]["all"][6]["innerHTML"])
+        //to use the document object model we can also use document instead of window.document
+        document.getElementById("demo").innerHTML = "Using demo we can change the content of the element with id demo"
+        document.write(20+30) //this will write 50 in the document
+
+        
+    </script>
+</body>
+</html>

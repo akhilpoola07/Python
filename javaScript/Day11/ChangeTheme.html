@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: orange;
+        }
+        .id1{
+            background: radial-gradient(circle at top, rgba(106, 128, 145, 0.18), transparent 35%),
+            linear-gradient(135deg, #0b2237 0%, #193b54 45%, #0f2b3f 100%);
+            color:rgb(208, 36, 36);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Akhil REDDY😍</h1>
+        
+
+    </div>
+    <button id = "btn1">Change Theme</button>
+    <script>
+        function ChangeTHeme(){
+            let div = document.querySelector("h1");
+            div.classList.toggle("id1");
+        }
+        let button = document.querySelector("button");
+        console.dir(button.innerText);
+        button.addEventListener("click",ChangeTHeme);
+    </script>
+</body>
+</html>

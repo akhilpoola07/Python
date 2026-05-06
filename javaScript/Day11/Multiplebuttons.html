@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Button1</button>
+    <button>Button2</button>
+    <button>Button3</button>
+    <script>
+        function say_hello(){
+            console.log("Hello");
+            
+        }
+        Mulbtns = document.querySelectorAll("button")
+        for (let button of Mulbtns){
+            button.addEventListener("click",say_hello)
+            
+        }
+    </script>
+</body>
+</html>

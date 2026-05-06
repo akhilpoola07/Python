@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Project</title>
+    <style>
+        .container {
+            height: 200px;
+            width: 100%;
+            background-color: antiquewhite;
+            display: flex; /* Using flex is more modern than float */
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Adds space between buttons */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="h1" style="text-align: center;">Count: 0</h1>
+
+    <div class="container">
+        <button style="background-color: green;"onclick="increment()">+</button>
+        <button style="background-color: rgb(76, 69, 69);"onclick="reset()" class="reset">Reset</button>
+        <button style="background-color: red;" onclick="decrement()">-</button>
+    </div>
+
+    <script>
+        let count = 0;
+        // This now works because the ID exists above
+        let display = document.getElementById("h1");
+
+        function increment() {
+            count += 1;
+            display.innerHTML = `Count: ${count}`;
+        }
+
+        function reset() {
+            count = 0;
+            display.innerHTML = `Count: ${count}`;
+        }
+
+        function decrement() {
+            count -= 1;
+            display.innerHTML = `Count: ${count}`;
+        }
+    </script>
+    
+</body>
+</html>

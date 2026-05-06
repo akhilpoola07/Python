@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        .class1{
+    background-color: yellow;
+    }
+    .class2{
+        color: red;
+    }
+    .class3{
+        font-size:20px;
+    }
+    #id1 > li{
+        color:blue;
+    }
+    </style>
+</head>
+<body>
+    <h1>Akhil Reddy</h1>
+    <h2>Developer</h2>
+    <p>He is a good boy </p>
+    <ul id="id1">
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+    </ul>
+    </body>
+    <script>
+        let paraelement = document.querySelector("p");
+        //parameterelement.classList.add("class1","class2","class3")
+        paraelement.classList.add("class1");
+        paraelement.classList.add("class2");
+        let h1element = document.querySelector("h1");
+        
+        h1element.classList.add("class1");
+        h1element.classList.add("class2");
+        //Remove the class
+        paraelement.classList.remove("class2","class1")
+        //is contains method : used to check whether the class is present or not
+        let result = paraelement.classList.contains("class2")
+        console.log(result)
+        //Toggle method : used to add the class if it is not present and remove the class if it is present
+        paraelement.classList.toggle("class1")
+         let h2 = document.querySelector("h2");
+            h2.classList.toggle("class1")//add the class if it is not present and remove the class if it is present
+            h2.classList.toggle("class1")//remove the class if it is present and add the class if it is not present
+            h2.classList.toggle("class2")//ADD THE CLASS IF IT IS NOT PRESENT AND REMOVE THE CLASS IF IT IS PRESENT
+        //selects the children of the element with id "id1"
+        let ulElement = document.querySelectorAll("#id1 > li");
+        console.log(ulElement)
+        for(let taf of ulElement){
+            taf.innerText="Rajini"
+        }
+        //Another method to select the list items
+        let listItems = document.querySelectorAll("#id1  li");
+        console.log(listItems)
+    </script>
+</body>
+</html>

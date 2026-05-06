@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Example</title>
+</head>
+<body>
+
+    <h1 id="title">DOM Demonstration</h1>
+    <p id="message">This is original text.</p>
+
+    <button onclick="changeContent()">Change Content</button>
+    <button onclick="changeStyle()">Change Style</button>
+    <button onclick="createElement()">Create Element</button>
+
+    <div id="container"></div>
+
+    <script >
+        // 1. SELECTING ELEMENTS
+// We store references to the HTML elements in variables
+let title = document.getElementById("title");
+let message = document.getElementById("message");
+let container = document.getElementById("container");
+
+// 2. CHANGING CONTENT
+// Updates the text inside an existing element
+function changeContent() {
+    message.textContent = "The content has been changed using JavaScript DOM.";
+}
+
+// 3. CHANGING STYLES
+// Modifies the CSS properties of an element directly
+function changeStyle() {
+    message.style.color = "blue";
+    message.style.fontSize = "22px";
+    message.style.fontWeight = "bold";
+}
+
+// 4. CREATING ELEMENTS
+// Generates a brand new element and injects it into the page
+function createElement() {
+    let newPara = document.createElement("p");
+    newPara.textContent = "This paragraph is created dynamically.";
+    container.appendChild(newPara);
+}
+    </script>
+</body>
+</html>

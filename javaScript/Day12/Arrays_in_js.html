@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <script>
+        //Spread operator
+        let arr1  = ["a","b","c"];
+        let arr2 = ["d","e","f","g"];
+        let arr3 = [...arr1,...arr2];
+        console.log(arr3);
+        let Iron = {
+            n1:"Iron",
+            n2:"Spider"
+        }
+        let Captain = {
+            n3:"America",
+            n4:"Natasha"
+        }
+        let Avengers = {...Iron , ...Captain }
+        console.log(Avengers)
+        Captain = {...Captain,n5:"Black Panther"}
+        console.log(Captain)
+        Avengers = {...Iron , ...Captain ,n6:"Akhil" }
+        console.log(Avengers)
+    </script>
+</body>
+</html>

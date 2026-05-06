@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #one {
+            width: 200px;
+            height: 300px;
+            background-color: lightblue;
+            border: 15px solid rgb(229, 129, 8);
+        }
+        button {
+            width: 150px;
+            align-content: center;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "one">
+        <button>Button1</button>
+        <button>Button2</button>
+
+    </div>
+    <script>
+        let div = document.querySelector("#one");
+        //beforebegin: Before the element itself.
+        let button3 = document.createElement("button");
+        button3.textContent = "Button3";
+        button3.style.color = "red";
+        button3.style.backgroundColor = "yellow";
+        div.insertAdjacentElement("beforebegin", button3);
+        let button4 = document.createElement("button");
+        button4.textContent = "Button4Afterbegin";
+        button4.style.color = "red";
+        button4.style.backgroundColor = "yellow";
+        div.insertAdjacentElement("afterbegin", button4);
+        //insert AdjacentElement
+        
+        let button5 = document.createElement("button");
+        button5.textContent = "Button5Beforeend";
+        button5.style.color = "red";
+        button5.style.backgroundColor = "yellow";
+        div.insertAdjacentElement("beforeend", button5);
+
+        let button6 = document.createElement("button");
+        button6.textContent = "Button6Afterend";    
+        button6.style.color = "red";
+        button6.style.backgroundColor = "yellow";
+        div.insertAdjacentElement("afterend", button6);
+        //insert button between button1 and button2
+        let button1 = document.querySelectorAll("button")[2]
+        console.dir(button1.innerText);
+        let button = document.createElement("button")
+        button.innerText = "Update button"
+        button1.insertAdjacentElement("afterend",button)
+    </script>
+</body>
+</html>

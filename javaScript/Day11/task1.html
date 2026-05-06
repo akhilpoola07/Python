@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one {
+            width: 200px;
+            height: 300px;
+            background-color: lightblue;
+            border: 15px solid rgb(229, 129, 8);
+        }
+        </style>
+</head>
+<body>
+    <div id = "one">
+        <ol>
+            <li>Apple</li>
+            <li>Banana</li>
+        </ol>
+        
+    </div>
+    <script>
+        let list = document.querySelector("#one ol");
+       
+        
+        // Add Watermelon at the begin of the list
+        let li1 = document.createElement("li")
+        li1.innerText = "Watermelon";
+        list.insertAdjacentElement("afterbegin",li1);
+        // add cherry at the end of the list
+        let li2 = document.createElement("li")
+        li2.innerText = "cherry";
+        list.insertAdjacentElement("beforeend",li2);
+         //add the mango between apple and banana
+         //select the apple element and then insert the mango after it
+        //  let apple = list.querySelector("li:nth-child(2)");
+        //  let mango = document.createElement("li");
+        //  mango.innerText = "Mango";
+        //  apple.insertAdjacentElement("afterend", mango);
+         //Another method to add the mango between apple and banana
+        let apple = document.querySelectorAll("#one ol li")[1];
+        console.dir(apple.innerText);
+        let mango = document.createElement("li");
+        mango.innerText = "Mango";
+        apple.insertAdjacentElement("afterend", mango);
+         
+        //another
+        let banana = document.querySelectorAll("#one ol li")[3]
+        console.dir(banana)
+        let mang = document.createElement("li")
+        mang.innerText= "Mango"
+        banana.insertAdjacentElement("beforebegin",mang);
+         
+    </script>
+</body>
+</html>
